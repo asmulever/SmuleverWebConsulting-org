@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smulever Web Consulting • Preguntas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="page-header">
+      <img src="images/LogoMarca_SmWC.png" alt="Smulever Web Consulting" class="hero-logo" />
+      <p class="eyebrow">Meta Verified-ready • WhatsApp Business/Cloud API</p>
+      <nav class="page-nav">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Servicios</a>
+        <a href="faq.html" aria-current="page">Preguntas</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel page-panel">
+        <h1>Preguntas frecuentes</h1>
+        <div class="faq-row">
+          <button id="chat-toggle" class="chat-toggle" type="button" aria-expanded="false">
+            <span class="icon" aria-hidden="true">🎧</span> ¿Querés consultar algo?
+          </button>
+          <div id="chat-panel" class="chat-panel" aria-live="polite">
+            <p>
+              Esta landing confirma qué hacemos, a quién ayudamos y el contacto. Para ver ideas anteriores de campañas,
+              escribinos al email corporativo o al WhatsApp.
+            </p>
+            <p>
+              Meta Verified para WhatsApp incluye una página profesional dentro del ecosistema; avanzamos con esa validación
+              y con la automatización del chat cuando el canal queda estable.
+            </p>
+          </div>
+        </div>
+        <div class="policy-note">
+          <p>Políticas visibles: privacidad de datos, contacto y horarios de atención. Todo respeta la ley argentina de protección de datos.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Smulever Web Consulting • Meta Verified-ready • WhatsApp Business +54 11 21379618</p>
+      <p>Fondo único, pie de página uniforme y tipografía clara para reforzar la presencia mínima verificable.</p>
+    </footer>
+  </div>
+
+  <script>
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatPanel = document.getElementById('chat-panel');
+    chatPanel.hidden = true;
+
+    chatToggle.addEventListener('click', () => {
+      const visible = chatPanel.hidden;
+      chatPanel.hidden = !visible;
+      chatToggle.setAttribute('aria-expanded', visible);
+      chatToggle.classList.toggle('active', visible);
+    });
+  </script>
+</body>
+</html>

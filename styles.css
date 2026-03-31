@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #f8f7ff;
+  --bg: #f4f5ff;
   --panel: #ffffff;
-  --ink: #111429;
-  --muted: #4b4c6b;
+  --ink: #0d0f21;
+  --muted: #4c4f74;
   --accent: #5b79ff;
   --accent-dark: #414fbd;
   --border: #d6d8ff;
-  --shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+  --shadow: 0 20px 60px rgba(12, 16, 34, 0.18);
 }
 
 *,
@@ -19,7 +19,7 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   background: var(--bg);
   color: var(--ink);
 }
@@ -28,42 +28,75 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 2rem clamp(1.25rem, 2vw, 3rem) 3rem;
 }
 
-.hero {
-  background: var(--panel);
-  border-radius: 24px;
-  padding: clamp(2rem, 4vw, 3rem);
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  gap: 0.5rem;
 }
 
 .hero-logo {
   width: 140px;
-  margin-bottom: 1rem;
 }
 
 .eyebrow {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.3em;
   color: var(--muted);
-  margin-bottom: 0.5rem;
 }
 
-.hero h1 {
-  margin: 0;
-  font-size: clamp(2.25rem, 4vw, 3rem);
+.page-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.page-nav a[aria-current='page'],
+.page-nav a:hover {
+  background: rgba(91, 121, 255, 0.15);
+  color: var(--accent-dark);
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: 24px;
+  padding: clamp(2rem, 3vw, 3rem);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.page-panel h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+}
+
+.page-panel p {
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .hero-subtitle {
+  margin: 1rem 0 1.5rem;
   font-size: 1.05rem;
-  margin: 1rem auto 1.5rem;
-  color: var(--muted);
-  max-width: 680px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-actions {
@@ -78,7 +111,7 @@ body {
   padding: 0.85rem 1.6rem;
   border-radius: 999px;
   background: var(--accent);
-  color: white;
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.2s ease;
@@ -94,36 +127,15 @@ body {
   color: var(--accent);
 }
 
-.hero-note {
-  font-size: 0.9rem;
-  color: var(--muted);
+.hero-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
 }
 
-.panel {
-  background: var(--panel);
-  border-radius: 24px;
-  padding: clamp(1.75rem, 3vw, 2.5rem);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-}
-
-.panel-heading h2 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.panel-heading p {
-  margin: 0.35rem 0 0;
-  color: var(--muted);
-}
-
-.panel-body{
-  margin-top: 1.2rem;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.panel-body .label {
+.label {
   font-weight: 600;
   color: var(--accent-dark);
 }
@@ -136,7 +148,7 @@ body {
 }
 
 .service-grid article {
-  background: #f4f5ff;
+  background: #eff1ff;
   border-radius: 16px;
   padding: 1rem;
   border: 1px solid var(--border);
@@ -145,13 +157,14 @@ body {
 
 .service-grid h3 {
   margin: 0 0 0.5rem;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
 .faq-row {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .chat-toggle {
@@ -166,14 +179,13 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  width: fit-content;
 }
 
 .chat-panel {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.2rem;
-  background: #fefefe;
+  background: #fdfdff;
   box-shadow: 0 10px 30px rgba(17, 20, 41, 0.08);
   max-height: 0;
   overflow: hidden;
@@ -183,16 +195,16 @@ body {
 .chat-panel p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .chat-panel:not([hidden]) {
-  max-height: 260px;
+  max-height: 280px;
 }
 
 .policy-note {
   margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 

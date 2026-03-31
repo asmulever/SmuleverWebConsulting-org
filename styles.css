@@ -69,8 +69,8 @@ body::after {
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
-  padding: 1rem clamp(1.25rem, 2vw, 3rem);
-  background: rgba(11, 31, 59, 0.85);
+  padding: 0.5rem clamp(1.25rem, 2vw, 3rem);
+  background: rgba(11, 31, 59, 0.95);
   z-index: 60;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 }
@@ -107,11 +107,16 @@ body::after {
 .toolbar {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  background: rgba(11, 31, 59, 0.95);
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .toolbar a {
-  color: rgba(255, 255, 255, 0.8);
-  padding: 0.5rem 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.2rem 0.5rem;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease, border-bottom 0.2s ease;
@@ -119,7 +124,7 @@ body::after {
 
 .toolbar a:hover {
   color: #f4f7fa;
-  border-bottom: 2px solid rgba(242, 169, 0, 0.6);
+  border-bottom: 2px solid rgba(242, 169, 0, 0.8);
 }
 
 .panel {

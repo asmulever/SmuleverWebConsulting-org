@@ -205,6 +205,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+  justify-items: center;
 }
 
 .cases-grid article,
@@ -212,11 +213,13 @@ main {
 .benefits-grid article {
   background: var(--card-gradient);
   border-radius: 18px;
-  padding: 1.2rem;
-  min-height: 170px;
+  padding: 0.9rem 1rem;
+  min-height: 150px;
+  max-width: 320px;
   color: #f4f7fa;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 
 .cases-grid article h3,

@@ -156,6 +156,8 @@ main {
   flex-direction: column;
   width: 100%;
   overflow-y: auto;
+  transform: translateY(20px);
+  transition: transform 0.35s ease;
 }
 
 .hero-panel {
@@ -167,6 +169,23 @@ main {
 
 .hero-panel .hero-content {
   color: #f4f7fa;
+}
+
+.panel-inner {
+  width: min(900px, 90vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.panel-inner h2 {
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .proof-panel,

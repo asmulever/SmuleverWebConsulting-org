@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
+  --header-height: 80px;
   --bg: #0B1F3B;
   --panel: rgba(244, 247, 250, 0.95);
   --ink: #061233;
@@ -27,7 +28,7 @@ body {
   color: var(--ink);
   position: relative;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body::before {
@@ -56,7 +57,7 @@ body::after {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 6rem clamp(1.25rem, 2vw, 3rem) 3rem;
+  padding: calc(var(--header-height) + 1rem) clamp(1.25rem, 2vw, 3rem) 3rem;
 }
 
 .page-header {
@@ -130,6 +131,15 @@ body::after {
   position: relative;
   overflow: hidden;
   animation: floatPanel 12s ease-in-out infinite;
+  display: none;
+  height: calc(100vh - var(--header-height));
+}
+
+.panel.active-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
 }
 
 .hero-panel {

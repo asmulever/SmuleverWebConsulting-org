@@ -10,7 +10,7 @@
   <div class="page-shell">
     <header class="page-header header-fixed">
       <div class="logo-wrapper">
-        <img src="images/LogoMarca_SmWC.png" alt="Marca gráfica Smulever Web Consulting" class="hero-logo" />
+        <img src="images/LogoMarca_SmWC_menu.png" alt="Marca gráfica Smulever Web Consulting" class="hero-logo" />
       </div>
       <nav class="page-nav toolbar">
         <a href="#hero">Propuesta</a>
@@ -43,7 +43,7 @@
         </div>
       </section>
 
-      <section class="panel services-panel" id="services">
+      <section class="panel services-panel" id="services" hidden>
         <h2>Capacidades</h2>
         <div class="service-grid">
           <article>
@@ -61,7 +61,7 @@
         </div>
       </section>
 
-      <section class="panel cases-panel" id="cases">
+      <section class="panel cases-panel" id="cases" hidden>
         <h2>Casos y escenarios</h2>
         <div class="cases-grid">
           <article>
@@ -79,7 +79,7 @@
         </div>
       </section>
 
-      <section class="panel approach-panel" id="approach">
+      <section class="panel approach-panel" id="approach" hidden>
         <h2>Enfoque de trabajo</h2>
         <div class="process-list">
           <p>1. Diagnóstico de complejidades y oportunidades de integración.</p>
@@ -89,7 +89,7 @@
         </div>
       </section>
 
-      <section class="panel contact-panel" id="contact">
+      <section class="panel contact-panel" id="contact" hidden>
         <h2>Contacto</h2>
         <div class="contact-layout">
           <div class="contact-info">
@@ -130,5 +130,28 @@
       <p>Smulever Web Consulting • Automatización, integración y arquitectura orientada a impacto.</p>
     </footer>
   </div>
+
+  <script>
+    const sections = document.querySelectorAll('main .panel');
+    const navLinks = document.querySelectorAll('.toolbar a');
+
+    const activateSection = id => {
+      sections.forEach(section => {
+        const match = section.id === id;
+        section.classList.toggle('active-panel', match);
+        section.hidden = !match;
+      });
+    };
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        const targetId = link.getAttribute('href').slice(1);
+        activateSection(targetId);
+      });
+    });
+
+    activateSection('hero');
+  </script>
 </body>
 </html>

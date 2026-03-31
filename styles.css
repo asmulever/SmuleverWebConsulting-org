@@ -278,6 +278,37 @@ main {
   font-weight: 500;
 }
 
+.brand-highlight-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.brand-highlight-pill {
+  padding: 0.4rem 1.6rem;
+  border-radius: 999px;
+  background: rgba(11, 31, 59, 0.85);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(242, 169, 0, 0.3);
+}
+
+.brand-highlight-pill span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-highlight::before,
+.brand-highlight::after {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background: rgba(242, 169, 0, 0.6);
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}
+
 .hero-actions,
 .trust-row {
   display: flex;

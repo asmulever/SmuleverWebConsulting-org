@@ -188,6 +188,13 @@ body::after {
   line-height: 1.6;
 }
 
+.cases-grid article:hover,
+.service-grid article:hover,
+.benefits-grid article:hover {
+  border-color: var(--accent);
+  box-shadow: 0 16px 30px rgba(242, 169, 0, 0.35);
+}
+
 .credentials-row {
   margin-top: 1.2rem;
   display: grid;
@@ -403,6 +410,10 @@ body::after {
   border-left: 4px solid rgba(91, 121, 255, 0.6);
 }
 
+.contact-info:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(242, 169, 0, 0.25);
+}
 .info-title {
   font-weight: 600;
   margin-bottom: 0.25rem;

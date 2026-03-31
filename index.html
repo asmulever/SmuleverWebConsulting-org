@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Distribuidora JS • Presencia verificable</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <img src="images/LogoMarca_SmWC.png" alt="Distribuidora SMWC logo" class="hero-logo" />
+      <p class="eyebrow">Meta Verified-ready • WhatsApp Business/Cloud API</p>
+      <h1>Distribuidora JS</h1>
+      <p class="hero-subtitle">
+        Construimos presencia digital mínima verificable con claridad: validamos qué hacemos, a quién ayudamos
+        y cómo contactarnos para que Meta reconozca un negocio serio detrás del número.
+      </p>
+      <div class="hero-actions">
+        <a class="hero-link" href="mailto:distribuidorajs@gmail.com?subject=Contacto%20Meta%20Verified">Email corporativo</a>
+        <a class="hero-link ghost" href="https://wa.me/541121379618" target="_blank" rel="noreferrer">WhatsApp +54 11 21379618</a>
+      </div>
+      <p class="hero-note">
+        Meta exige teléfono real para Meta Verified y evalúa coherencia de marca, nombre visible y activos del negocio;
+        +54 11 21379618 ya está en WhatsApp Business/Platform y se acompaña con esta landing de confianza.
+      </p>
+    </header>
+
+    <section id="about" class="panel">
+      <div class="panel-heading">
+        <h2>About Us</h2>
+        <p>Presencia mínima verificable</p>
+      </div>
+      <div class="panel-body">
+        <p>
+          <strong>Razón social:</strong> Distribuidora Consultoría Web SRL (Distribuidora JS). Somos un equipo que acompaña a
+          empresas argentinas y regionales en la creación de campañas de promoción, automatización de atención por WhatsApp
+          y coordinación con plataformas como Meta Verified para WhatsApp.
+        </p>
+        <p>
+          Trabajamos con campañas previas visibles en nuestras piezas (lista de ideas y banners en el folder de campaña), y
+          mantenemos la consistencia entre colores, logo y mensajes que se muestran aquí.
+        </p>
+        <p>
+          Email corporativo: <span class="label">Distribuidora JS</span> (<a href="mailto:distribuidorajs@gmail.com">distribuidorajs@gmail.com</a>)
+          • WhatsApp: <strong>+54 11 21379618</strong> (Meta Verified en trámite con WhatsApp Business/Cloud API).
+        </p>
+      </div>
+    </section>
+
+    <section id="services" class="panel">
+      <div class="panel-heading">
+        <h2>Servicios que ofrecemos</h2>
+      </div>
+      <div class="service-grid">
+        <article>
+          <h3>Campañas de promoción</h3>
+          <p>
+            Conceptualizamos, diseñamos y medimos piezas para redes sociales y landing pages orientadas a conversiones
+            locales, usando los colores del branding y contenidos de campañas previas.
+          </p>
+        </article>
+        <article>
+          <h3>WhatsApp Business & Cloud API</h3>
+          <p>
+            Registramos números oficiales, configuramos mensajes de bienvenida y conectamos flujos automatizados cuando el
+            canal está estable. También acompañamos la certificación de Meta Verified para WhatsApp y el acceso a páginas
+            profesionales.
+          </p>
+        </article>
+        <article>
+          <h3>Consultoría de confianza</h3>
+          <p>
+            Validamos política de privacidad, términos de contacto y la coherencia entre el nombre visible (Distribuidora JS),
+            la landing y el número de contacto que Meta evalúa.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="panel">
+      <div class="panel-heading">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="faq-row">
+        <button id="chat-toggle" class="chat-toggle" type="button">
+          <span class="icon" aria-hidden="true">🎧</span> ¿Querés consultar algo?
+        </button>
+        <div id="chat-panel" class="chat-panel" aria-live="polite">
+          <p>
+            La landing confirma que existimos, explicitamos el qué hacemos y el contacto. Si necesitás ver campañas pasadas,
+            escribinos y te compartimos la carpeta de ideas de promoción.
+          </p>
+          <p>
+            Meta Verified para WhatsApp incluye una página profesional dentro del ecosistema; avanzamos en paralelo con esa
+            validación y con la automatización del chat cuando el canal queda estable.
+          </p>
+        </div>
+      </div>
+      <div class="policy-note">
+        <p>Políticas visibles: privacidad de datos, contacto, y horarios de atención. Todo el contenido respeta la ley argentina de
+        protección de datos y los lineamientos de Meta.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Presencia mínima verificable • Distribuidora Consultoría Web SRL • Email: distribuidorajs@gmail.com</p>
+      <p>Teléfono oficial Meta Verified: +54 11 21379618 • WhatsApp Business • Página profesional Meta incluida.</p>
+    </footer>
+  </div>
+
+  <script>
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatPanel = document.getElementById('chat-panel');
+    chatPanel.hidden = true;
+
+    chatToggle.addEventListener('click', () => {
+      const visible = chatPanel.hidden;
+      chatPanel.hidden = !visible;
+      chatToggle.setAttribute('aria-expanded', visible);
+      chatToggle.classList.toggle('active', visible);
+    });
+  </script>
+</body>
+</html>

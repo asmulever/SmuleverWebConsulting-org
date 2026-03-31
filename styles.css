@@ -187,11 +187,68 @@ body::after {
   animation: glowPulse 3s ease-in-out infinite;
 }
 
+.contact-block {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(91, 121, 255, 0.12), rgba(91, 121, 255, 0.02));
+  border: 1px solid rgba(91, 121, 255, 0.45);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+.contact-links a {
+  color: #05318b;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(5, 49, 139, 0.25);
+  background: rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s ease;
+}
+
+.contact-links a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(5, 49, 139, 0.6);
+}
+
 .service-grid {
   margin-top: 1.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+}
+
+.about-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.about-grid article {
+  background: #e3e7ff;
+  border-radius: 16px;
+  padding: 1rem;
+  border: 1px solid rgba(5, 49, 139, 0.25);
+}
+
+.about-grid h3 {
+  margin-top: 0;
+  color: var(--ink);
+}
+
+.about-grid ul {
+  padding-left: 1rem;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .service-grid article {
@@ -253,6 +310,30 @@ body::after {
 
 .chat-panel:not([hidden]) {
   max-height: 320px;
+}
+
+.faq-list {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-list article {
+  padding: 1rem;
+  border-radius: 16px;
+  background: #eef1ff;
+  border: 1px solid rgba(5, 49, 139, 0.15);
+}
+
+.faq-list h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.faq-list p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .policy-note {

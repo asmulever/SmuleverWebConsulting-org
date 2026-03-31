@@ -233,6 +233,16 @@ body::after {
   max-width: 640px;
 }
 
+.brand-highlight {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin: 0 auto 1.5rem;
+  color: rgba(242, 169, 0, 0.92);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .hero-actions,
 .trust-row {
   display: flex;

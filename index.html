@@ -28,7 +28,6 @@
             Redefinimos procesos críticos con soluciones de automatización, integración y gobernanza de datos. Nuestro equipo diseña
             capacidades que hacen tangible la eficiencia operativa sin depender de nombres de tecnologías.
           </p>
-          <p class="brand-highlight">Smulever Web Consulting • Automatización, integración y arquitectura orientada a impacto.</p>
           <div class="hero-actions">
             <a class="primary-cta" href="#contact">Planificá una revisión</a>
             <a class="secondary-cta" href="mailto:distribuidorajs@gmail.com?subject=Consulta%20Smulever">Email corporativo</a>
@@ -128,41 +127,5 @@
       <p>Smulever Web Consulting • Automatización, integración y arquitectura orientada a impacto.</p>
     </footer>
   </div>
-
-  <script>
-    const navLinks = document.querySelectorAll('.page-nav a');
-    const panels = document.querySelectorAll('.panel');
-
-    function focusPanel(target) {
-      panels.forEach(panel => panel.classList.remove('focused'));
-      if (target) {
-        target.classList.add('focused');
-      }
-    }
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', event => {
-        const hash = link.getAttribute('href');
-        if (!hash.startsWith('#')) return;
-        event.preventDefault();
-        const target = document.querySelector(hash);
-        if (target) {
-          focusPanel(target);
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          history.replaceState(null, '', hash);
-        }
-      });
-    });
-
-    window.addEventListener('hashchange', () => {
-      const target = document.querySelector(location.hash);
-      if (target) {
-        focusPanel(target);
-      }
-    });
-
-    // focus hero by default
-    focusPanel(document.querySelector('#hero'));
-  </script>
 </body>
 </html>

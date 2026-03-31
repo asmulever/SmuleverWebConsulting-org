@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #f4f5ff;
-  --panel: #ffffff;
+  --bg: #0B1F3B;
+  --panel: rgba(244, 247, 250, 0.95);
   --ink: #061233;
   --muted: #4b4d78;
-  --accent: #5b79ff;
+  --accent: #F2A900;
   --accent-dark: #2c3c8e;
-  --border: rgba(91, 121, 255, 0.25);
+  --border: rgba(11, 31, 59, 0.2);
   --shadow: 0 30px 60px rgba(6, 18, 51, 0.25);
+  --bg-gradient: linear-gradient(145deg, #0B1F3B 0%, #102550 35%, #1E3A5F 70%, #F4F7FA 100%);
+  --card-gradient: linear-gradient(140deg, rgba(11, 31, 59, 0.95), rgba(30, 58, 95, 0.75));
+  --card-soft: #E8ECFF;
 }
 
 *,
@@ -31,12 +34,9 @@ body::before {
   content: '';
   position: fixed;
   inset: -20% -10% -20% -10%;
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.4), transparent 45%),
-    radial-gradient(circle at 80% 0%, rgba(91, 121, 255, 0.25), transparent 40%),
-    linear-gradient(145deg, rgba(163, 188, 255, 0.35) 0%, rgba(244, 245, 255, 0.85) 60%, rgba(197, 211, 255, 0.2) 100%);
+  background-image: var(--bg-gradient);
   filter: blur(1px);
-  opacity: 0.85;
+  opacity: 0.9;
   z-index: -2;
   animation: marbleMove 16s linear infinite;
   background-size: 120% 120%;
@@ -125,6 +125,13 @@ body::after {
 
 .hero-panel {
   text-align: center;
+  background: linear-gradient(180deg, rgba(11, 31, 59, 0.95), rgba(30, 58, 95, 0.9));
+  color: #f4f7fa;
+  border: none;
+}
+
+.hero-panel .hero-content {
+  color: #f4f7fa;
 }
 
 .proof-panel,
@@ -149,11 +156,13 @@ body::after {
 .cases-grid article,
 .service-grid article,
 .benefits-grid article {
-  background: #e8ecff;
-  border-radius: 16px;
+  background: var(--card-gradient);
+  border-radius: 18px;
   padding: 1.2rem;
-  border: 1px solid rgba(63, 92, 255, 0.2);
   min-height: 170px;
+  color: #f4f7fa;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
 }
 
 .cases-grid article h3,
@@ -227,6 +236,16 @@ body::after {
 
 .hero-actions {
   margin-bottom: 1.5rem;
+}
+
+.trust-row span {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.hero-panel .trust-row span {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .primary-cta,
@@ -313,6 +332,10 @@ body::after {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.contact-panel {
+  background: rgba(244, 247, 250, 0.95);
 }
 
 .contact-hero {

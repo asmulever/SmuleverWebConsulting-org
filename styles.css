@@ -60,6 +60,15 @@ body::after {
   padding: calc(var(--header-height) + 1rem) clamp(1.25rem, 2vw, 3rem) 3rem;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.panel {
+  margin-top: 1rem;
+}
+
 .page-header {
   position: fixed;
   top: 0;

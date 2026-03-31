@@ -137,6 +137,91 @@ body::after {
   margin: 0 auto;
 }
 
+.cases-grid,
+.service-grid,
+.benefits-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.cases-grid article,
+.service-grid article,
+.benefits-grid article {
+  background: #e8ecff;
+  border-radius: 16px;
+  padding: 1.2rem;
+  border: 1px solid rgba(63, 92, 255, 0.2);
+  min-height: 170px;
+}
+
+.cases-grid article h3,
+.service-grid h3,
+.benefits-grid h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.process-panel {
+  text-align: left;
+}
+
+.process-list {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.process-list p {
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.credentials-row {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.credentials-row article {
+  padding: 1.2rem;
+  border-radius: 18px;
+  background: #eef1ff;
+  border: 1px solid rgba(5, 49, 139, 0.15);
+  text-align: center;
+}
+
+.credentials-row strong {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--accent-dark);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-grid article {
+  padding: 1rem;
+  border-radius: 16px;
+  background: #eef1ff;
+  border: 1px solid rgba(5, 49, 139, 0.15);
+}
+
+.contact-grid strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
+  color: var(--accent-dark);
+}
+
 .page-panel h1 {
   margin-top: 0;
   font-size: clamp(2rem, 3vw, 2.8rem);
@@ -224,14 +309,6 @@ body::after {
   animation: glowPulse 3s ease-in-out infinite;
 }
 
-.contact-block {
-  margin-top: 1.5rem;
-  padding: 1rem 1.2rem;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(91, 121, 255, 0.12), rgba(91, 121, 255, 0.02));
-  border: 1px solid rgba(91, 121, 255, 0.45);
-}
-
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -253,8 +330,6 @@ body::after {
 .contact-links a:hover {
   transform: translateY(-2px);
   border-color: rgba(5, 49, 139, 0.6);
-}
-
 .contact-panel {
   display: flex;
   flex-direction: column;
@@ -266,11 +341,12 @@ body::after {
   justify-content: space-between;
   gap: 1.5rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .contact-hero h1 {
   margin: 0 0 0.5rem;
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
 }
 
 .contact-card {
@@ -308,6 +384,14 @@ body::after {
 
 .contact-form textarea {
   resize: vertical;
+}
+
+.contact-form label.full-width {
+  grid-column: 1 / -1;
+}
+
+.contact-textarea {
+  grid-column: 1 / -1;
 }
 
 .contact-stats {

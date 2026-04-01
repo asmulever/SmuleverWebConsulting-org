@@ -94,39 +94,54 @@
       </section>
 
       <section class="panel contact-panel" id="contact" hidden>
-        <h2>Contacto</h2>
+        <h2>Solicitud de diagnóstico</h2>
         <div class="contact-layout">
           <div class="contact-info">
-            <p class="info-title">Consultoría estratégica</p>
+            <p class="info-title">Evaluamos y estructuramos decisiones operativas complejas</p>
             <p class="info-body">
-              Evaluamos automatización, integración y arquitectura en tus procesos centrales. Coordinamos con equipos
-              de operaciones y tecnología para generar decisiones basadas en datos, sin ruido ni branding superfluo.
+              Trabajamos sobre casos con impacto estratégico. Tus datos alimentan un filtro inicial; si la demanda cumple el umbral,
+              te invitamos a agendar una llamada. Si no, respondemos asincrónicamente con recomendaciones.
             </p>
             <p class="info-meta">
-              Teléfono: +54 11 21379618<br />
               Email: distribuidorajs@gmail.com
             </p>
           </div>
           <form class="contact-form">
             <label>
-              Organización
-              <input type="text" name="company" placeholder="Ej. Retail regional" />
+              Contexto (empresa/tamaño)
+              <input type="text" name="context" placeholder="Ej. Retail regional / +250 empleados" />
             </label>
             <label>
-              Área responsable
-              <input type="text" name="area" placeholder="Operaciones, tecnología, finanzas..." />
+              Dominio principal
+              <select name="domain">
+                <option value="operaciones">Operaciones</option>
+                <option value="tecnología">Tecnología</option>
+                <option value="datos">Datos</option>
+                <option value="seguridad">Seguridad</option>
+              </select>
             </label>
             <label>
               Correo
               <input type="email" name="email" placeholder="contacto@empresa.com" />
             </label>
-            <label class="full-width">
-              Prioridad
-              <textarea name="message" rows="3" placeholder="Describí el desafío operativo a resolver"></textarea>
+            <label>
+              Urgencia
+              <select name="urgency">
+                <option value="inmediata">Inmediata</option>
+                <option value="30dias">30 días</option>
+                <option value="mas30">+30 días</option>
+              </select>
             </label>
-            <button type="submit" class="primary-cta">Solicitar análisis</button>
+            <label class="full-width">
+              Problema / Resultado esperado
+              <textarea name="message" rows="3" placeholder="Describe el desafío operativo a resolver"></textarea>
+            </label>
+            <button type="submit" class="primary-cta">Solicitar diagnóstico</button>
           </form>
         </div>
+        <p class="info-note">
+          Si el caso nunca llega al umbral, te respondemos con un resumen asincrónico; si se aprueba, recibirás el link para agendar llamada.
+        </p>
       </section>
     </main>
 

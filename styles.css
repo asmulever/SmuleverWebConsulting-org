@@ -528,6 +528,13 @@ main {
   color: var(--accent-dark);
 }
 
+.info-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 1rem;
+}
+
 .contact-form label.full-width {
   grid-column: 1 / -1;
 }

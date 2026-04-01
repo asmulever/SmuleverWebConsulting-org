@@ -2,79 +2,78 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Smulever Web Consulting • Contacto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto • Smulever Web Consulting</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page-shell">
-    <header class="page-header">
-      <img src="images/LogoMarca_SmWC.png" alt="Smulever Web Consulting logo mark" class="hero-logo" />
-      <p class="eyebrow">Consultoría de presencia digital</p>
-      <nav class="page-nav">
-        <a href="index.html">Inicio</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Servicios</a>
-        <a href="faq.html">Preguntas</a>
-        <a href="contact.html" aria-current="page">Contacto</a>
-      </nav>
-    </header>
+  <header class="site-header">
+    <div class="site-brand">Smulever Web Consulting</div>
+    <nav class="site-nav">
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Nosotros</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
 
-    <main>
-      <section class="panel contact-panel">
-        <h2>Solicitud de diagnóstico</h2>
-        <div class="contact-layout">
-          <div class="contact-info">
-            <p class="info-title">Evaluamos y estructuramos decisiones operativas complejas</p>
-            <p class="info-body">
-              La agenda se activa mediante un filtro de demanda. Solo casos alineados con impacto reciben invitación a llamada.
-            </p>
-            <p class="info-meta">
-              Email: distribuidorajs@gmail.com
-            </p>
-          </div>
-          <form class="contact-form">
-            <label>
-              Contexto (empresa/tamaño)
-              <input type="text" name="context" placeholder="Ej. Retail regional / +250 empleados" />
-            </label>
-            <label>
-              Dominio principal
-              <select name="domain">
-                <option value="operaciones">Operaciones</option>
-                <option value="tecnología">Tecnología</option>
-                <option value="datos">Datos</option>
-                <option value="seguridad">Seguridad</option>
-              </select>
-            </label>
-            <label>
-              Correo electrónico
-              <input type="email" name="email" placeholder="contacto@empresa.com" />
-            </label>
-            <label>
-              Urgencia
-              <select name="urgency">
-                <option value="inmediata">Inmediata</option>
-                <option value="30dias">30 días</option>
-                <option value="mas30">+30 días</option>
-              </select>
-            </label>
-            <label class="full-width">
-              Problema / Resultado esperado
-              <textarea name="message" rows="3" placeholder="Describe el desafío operativo a resolver"></textarea>
-            </label>
-            <button type="submit" class="primary-cta">Solicitar diagnóstico</button>
-          </form>
+  <main class="page">
+    <section class="content-panel">
+      <h2>Impulsa tu negocio con soluciones informáticas</h2>
+      <p>Contanos sobre tus necesidades y coordinamos una asesoría para diagnosticar tu infraestructura y rutas de automatización.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Agenda una asesoría</h3>
+          <p>Completá el formulario y u equipo técnico te responde con los pasos siguientes.</p>
         </div>
-        <p class="info-note">
-          Si el caso supera el umbral, se habilita un enlace de calendario para agendar llamada; de lo contrario respondemos por email.
-        </p>
-      </section>
-    </main>
+        <div class="card">
+          <h3>2. Descubrimos necesidades</h3>
+          <p>Analizamos tus sistemas y priorizamos los puntos críticos de operación.</p>
+        </div>
+        <div class="card">
+          <h3>3. Propuesta personalizada</h3>
+          <p>Definimos un plan de automatización, integración y soporte con métricas claras.</p>
+        </div>
+      </div>
 
-    <footer class="footer">
-      <p>Smulever Web Consulting • Proyectos guiados por impacto operacional.</p>
-    </footer>
-  </div>
+      <form class="grid" style="margin-top: 2rem;">
+        <label>
+          Empresa
+          <input type="text" placeholder="Ej. Compañía Zona Oeste" />
+        </label>
+        <label>
+          Área / Dominio
+          <select>
+            <option>Operaciones</option>
+            <option>Tecnología</option>
+            <option>Datos</option>
+            <option>Seguridad</option>
+          </select>
+        </label>
+        <label>
+          Correo
+          <input type="email" placeholder="contacto@empresa.com" />
+        </label>
+        <label>
+          Urgencia
+          <select>
+            <option>Inmediata</option>
+            <option>30 días</option>
+            <option>Más de 30 días</option>
+          </select>
+        </label>
+        <label class="card" style="grid-column: span 2;">
+          Describe el desafío
+          <textarea rows="3" placeholder="¿Qué operación necesita automatización o integración?"></textarea>
+        </label>
+        <button class="btn-primary" style="grid-column: span 2;">Solicitar diagnóstico</button>
+      </form>
+
+      <div class="content-panel contact-footer" style="margin-top: 1.5rem;">
+        <p>Zona Oeste GBA, Argentina</p>
+        <p>Email: contacto@smuleverwebconsulting.com.ar</p>
+        <p>Trabajamos bajo pedido con diagnósticos previos; el acceso sincrónico se habilita tras revisar la información recibida.</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

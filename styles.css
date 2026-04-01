@@ -213,9 +213,10 @@ main {
 .benefits-grid article {
   background: var(--card-gradient);
   border-radius: 18px;
-  padding: 0.9rem 1rem;
-  min-height: 150px;
-  max-width: 320px;
+  padding: 0.7rem 0.9rem;
+  min-height: 120px;
+  max-width: 250px;
+  width: min(250px, 30vw);
   color: #f4f7fa;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);

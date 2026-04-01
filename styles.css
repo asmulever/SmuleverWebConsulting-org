@@ -158,6 +158,12 @@ main {
   overflow-y: auto;
   transform: translateY(20px);
   transition: transform 0.35s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: calc(var(--header-height) + 1rem);
+  padding-bottom: 3rem;
 }
 
 .hero-panel {

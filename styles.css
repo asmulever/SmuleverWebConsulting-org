@@ -158,7 +158,7 @@ main {
   overflow-y: auto;
   transform: translateY(20px);
   transition: transform 0.35s ease;
-  top: 0;
+  top: calc(var(--header-height) + 10px);
   left: 0;
   right: 0;
   bottom: 0;

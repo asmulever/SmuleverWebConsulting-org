@@ -160,7 +160,7 @@ main {
   overflow-y: auto;
   transform: translateY(20px);
   transition: transform 0.35s ease;
-  top: calc(var(--header-height) + 3px);
+  top: calc(var(--header-height) + 1.5px);
   left: 0;
   right: 0;
   padding-top: calc(var(--header-height) + 1rem);
@@ -223,8 +223,7 @@ main {
   border-radius: 18px;
   padding: 0.6rem 0.8rem;
   min-height: 110px;
-  max-width: 240px;
-  width: min(240px, 28vw);
+  width: 220px;
   color: #f4f7fa;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
@@ -232,6 +231,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .cases-grid article h3,
